@@ -9,3 +9,7 @@ def login():
 @auth.route('/logout')
 def logout():
     return redirect(url_for('auth.login'))
+
+@auth.route('/sign_up')
+def sing_up():
+    return redirect(url_for('auth.sign_up'))
