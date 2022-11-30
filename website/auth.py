@@ -8,8 +8,8 @@ def login():
 
 @auth.route('/logout')
 def logout():
-    return redirect(url_for('auth.login'))
-
+    return ""
+    
 @auth.route('/sign_up')
 def sing_up():
-    return redirect(url_for('auth.sign_up'))
+    return ""
