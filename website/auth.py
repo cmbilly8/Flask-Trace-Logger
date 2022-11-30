@@ -22,10 +22,10 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-        if re.fullmatch(emailReg, email) == False:
+        if re.fullmatch(emailReg, email) == False or len(email) > 150:
             flash('Invalid email.', category='error')
-        elif len(userName) < 3:
-            flash('User name must be greater than 2 characters.', category='error')
+        elif len(userName) < 3 or len(userName) > 14:
+            flash('User name must be between 3 and 14 characters', category='error')
         elif password1 != password2:
             flash('Passwords do not match.', category='error')
         else:
