@@ -22,7 +22,7 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-        if re.fullmatch(emailReg, email) == False or len(email) > 150:
+        if not re.fullmatch(emailReg, email) or len(email) > 150:
             flash('Invalid email.', category='error')
         elif len(userName) < 3 or len(userName) > 14:
             flash('User name must be between 3 and 14 characters', category='error')
@@ -30,6 +30,6 @@ def sign_up():
             flash('Passwords do not match.', category='error')
         else:
             flash('Success! Account created.', category='success')
-            addUser(email, userName, password2)
+            #addUser(email, userName, password2)
 
     return render_template("sign_up.html")
