@@ -2,12 +2,20 @@
     cursor: pointer;
   }
   
-textarea#content-target {
+textarea#logFile {
     width: 85%;
     height: 300px;
   }
 
+textarea#methodName {
+  width: 30%;
+  height: 30px;
+}
+
 div.log-preview {
     margin: 10px;
-    height: 1000px;
   }
+
+button.saveLogFilesBtn {
+  margin: 10px;
+}

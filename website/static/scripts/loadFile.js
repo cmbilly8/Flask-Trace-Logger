@@ -5,7 +5,7 @@ function getFile(event) {
   const input = event.target
 if ('files' in input && input.files.length > 0) {
     placeFileContent(
-    document.getElementById('content-target'),
+    document.getElementById('logFile'),
     input.files[0])
 }
 }

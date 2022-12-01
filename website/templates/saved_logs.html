@@ -1,9 +1,12 @@
 {% extends 'base.html'%}
-{% block title %}Sign Up{% endblock %}
+{% block title %}Saved Logs{% endblock %}
 {% block content %}
-<tr>
-    <td>Select a File to Load:</td>
-    <td><input type="file" id="fileToLoad"></td>
-    <td><button onclick="loadFileAsText()">Load Selected File</button><td>
-</tr>
+<h1 align="center">Log Files</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for log in user.logFiles %}
+  <li class="list-group-item">
+    {{ log.name }}
+  </li>
+</ul>
+  {% endfor %}
 {% endblock%}

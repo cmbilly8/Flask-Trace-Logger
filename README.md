@@ -3,6 +3,6 @@ Web application where users can catalog trace files for Hamilton Robots. This pr
 
 TODO:
 
-Add logfile saving to user account
+Display method names on save log files page
 
-Add error highlighting feature for logfile analysis
+

@@ -2,21 +2,18 @@
 {% block title %}Home{% endblock %} 
 {% block content %}
     <h1 align="center">Logfiles</h1>
-    <ul class="list-group list-group-flush" id="notes">
-      {% for note in user.LogFiles %}
-      <li class="list-group-item">
-        {{ LogFile.data }}
-      </li>
-      {% endfor %}
-    </ul>
-    <form method="POST">
-      <div class="file-selector" align="center">
+    <div class="file-selector" align="center">
         <label for="input-file">Specify a file:</label><br>
         <input type="file" id="input-file">
-       </div>  
-       <div align="center" class="log-preview">
-        <textarea id="content-target"></textarea>
-       </div>    
-
+    </div>
+    <form method="POST">  
+      <div align="center" class="log-preview">
+        <textarea name="logFile" id="logFile" class="form-control"></textarea>
+      </div>
+      <div align="center">
+        <p><strong>Save As...</strong></p>
+        <textarea name="methodName" id="methodName" class="form-control"></textarea>
+        <button type="Save" class="btn btn-primary saveLogFilesBtn">Save Log File</button>
+      </div>
     </form>
     {% endblock %}

@@ -6,7 +6,7 @@ class LogFile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.String(30000))
     methodName = db.Column(db.String(70))
-    runDate = db.Column(db.DateTime(timezone=True))
+    date = db.Column(db.DateTime(timezone=True))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
