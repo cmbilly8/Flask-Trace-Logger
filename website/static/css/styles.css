@@ -1,0 +1,13 @@
+.file-selector label {
+    cursor: pointer;
+  }
+  
+textarea#content-target {
+    width: 85%;
+    height: 300px;
+  }
+
+div.log-preview {
+    margin: 10px;
+    height: 1000px;
+  }

@@ -7,3 +7,8 @@ views = Blueprint('views', __name__)
 @login_required
 def index():
     return render_template('index.html', user=current_user)
+
+@views.route('/saved_logs')
+@login_required
+def upload_file():
+    return render_template('saved_logs.html', user=current_user)
