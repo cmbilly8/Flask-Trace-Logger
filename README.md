@@ -1,6 +1,8 @@
 # Flask-Trace-Logger
 Web application where users can catalog trace files (log files) for Hamilton Company Robots. This project is mainly for personal practice.
 
+Flask + Bootstrap
+
 TODO:
 
 Display method names on save log files page
